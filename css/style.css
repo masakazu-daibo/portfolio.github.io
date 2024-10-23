@@ -1,0 +1,378 @@
+@import url('https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@300;400;500;700;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 20px;
+}
+
+.home {
+    margin: 0 auto;
+    padding:0;
+    background-color: #E4DED3;
+    font-family: "Times New Roman","Kozuka Mincho";
+}
+
+/* ---------------------------------------------ローディング画面のスタイル--------------------------------------------- */
+#loading {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column; /* 縦方向に要素を並べる */
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+
+/* スピナーのスタイル */
+.spinner {
+    border: 16px solid #f3f3f3;
+    border-top: 16px solid #333;
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 2s linear infinite;
+    margin-bottom: 20px; /* テキストとスピナーの間にスペース */
+}
+
+/* ローディングテキストのスタイル */
+.loading-text {
+    font-size: 24px;
+    font-family: "Times New Roman";
+    color: #333;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+/* -------------------------------------------------------------------------------------------------------------------- */
+
+
+/* スマホ表示 */
+@media (max-width:787px){
+    .home{
+        font-size: 0.5rem;
+    }
+}
+
+@media (max-width:787px){
+    .sp{
+        display: none;
+    }
+    .contents_a{
+        padding: 4%;
+    }
+}
+
+.sp{
+    margin: 0;
+    padding: 0;
+}
+
+#header img{
+    display: block;
+    margin: 0;
+    box-sizing: border-box;
+    width: 100%;
+    height: 70%;
+}
+
+.menu{
+    margin: 0;
+    padding-right: 60px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: end;
+    list-style-type: none;
+    font-size: clamp(1rem, 3vw, 2rem);
+    background-color: #333;
+}
+
+.menu li{
+    font-family: "Times New Roman";
+    text-align: center;
+    width: 170px;
+}
+
+.menu a{
+    display: block;
+    padding: 20px 40px;
+    text-decoration: none;
+    color: #ddd;
+}
+
+a:hover{
+    opacity: 0.5;
+    filter: brightness(1.2);
+}
+
+#btn{
+    position:fixed;
+    bottom:30px;
+    right:30px;
+    cursor:pointer;
+    width:80px;
+    height:80px;
+    border-radius: 50%;
+    color: #ddd;
+    background-color: #333;
+}
+
+button:hover{
+    opacity: 0.5;
+    filter: brightness(1.2);
+}
+
+#top{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-top:4%;
+    padding-bottom: 4%;
+    height: auto;
+    gap: 4%;
+}
+
+#top .top_area{
+    width: 500px;
+}
+
+#top div img{
+    border: solid 4px #fff;
+    border-radius: 30px;
+    box-shadow: 12px 12px 12px rgba(0,0,0,0.4);
+    width: 100%;
+}
+
+#top div p{
+    padding: 4%;
+    font-size: 1.5rem;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+#main{
+    width: 100%;
+    height: auto;
+    background-color: #333;
+}
+
+div h2{
+    padding: 4%;
+}
+
+h2{
+    margin: auto;
+    text-align: center;
+    color: #ddd;
+    font-size:clamp(2.3rem, 4vw, 3rem);
+}
+
+h3{
+    font-size:clamp(1.3rem, 2.0vw, 1.6rem);
+}
+
+p{
+    font-size:clamp(0.7rem, 1.5vw, 1.2rem);
+}
+
+.contents_a{
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.contents_a img{
+    width: 100%;
+}
+
+.text_a{
+    color: #ddd;
+    font-size: 1.2rem;
+    width: 350px;
+    align-self: center;
+}
+
+.contents_b{
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.inner{
+    margin: 1%;
+    width: 400px;
+    height: 100%;
+}
+
+div .box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 8%;
+    height: 400px;
+    background-color: #E4DED3;
+    vertical-align: middle;
+}
+
+div .box img{
+    padding: 0;
+    width: 100%;
+}
+
+.text_b{
+    color: #ddd;
+    font-size: 1.2rem;
+    height: 60%;
+    padding: 10px;
+}
+
+.text_b li{
+    margin-left: 10px;
+    list-style-type: circle;
+}
+
+h2#contact-h2{
+    color: #333;
+    margin: 4%;
+    padding: 0;
+}
+
+.contact-form{
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
+    margin: 4%;
+    font-family: "Zen Maru Gothic", serif;
+}
+
+.title{
+    text-align: center;
+    margin-bottom: 4%;
+}
+
+form{
+    width: 500px;
+    padding: 1%;
+    border: 2px solid #333;
+    border-radius: 20px;
+}
+
+.item{
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.label{
+    float: left;
+    margin-right: 10px;
+    width: 150px;
+    border-left: 2px solid #c2704f;
+    padding-left: 1%;
+}
+
+.inputs{
+    float: left;
+    width: 300px;
+}
+
+input[type="text"],
+input[type="email"]{
+    border: solid 1px #aaa;
+    padding: 10px;
+    font-size:clamp(0.5rem, 1.5vw, 1rem);
+    border-radius: 5px;
+}
+
+textarea{
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    padding: 10px;
+    height: 160px;
+    font-size:clamp(0.5rem, 1.5vw, 1rem);
+    width: 300px;
+}
+
+.button-area{
+    text-align: center;
+}
+
+input[type="submit"]{
+    background-color: #c2704f;
+    border: none;
+    padding: 10px 30px;
+    color: #ddd;
+    font-size:clamp(0.5rem, 1.5vw, 1rem);
+    font-weight: bold;
+    border-radius: 5px;
+    box-shadow: 1px 1px 3px #333;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover{
+    opacity: 0.9;
+    filter: brightness(1.0);
+}
+
+.entryColumn{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.thanks{
+    font-size:clamp(0.5rem, 3vw, 2rem);
+}
+
+.entryColumn button{
+    margin-top: 8%;
+    background-color: #c2704f;
+    border: none;
+    padding: 20px 50px;
+    color: #ddd;
+    font-size:clamp(0.5rem, 1.5vw, 1rem);
+    font-weight: bold;
+    border-radius: 5px;
+    box-shadow: 1px 1px 3px #333;
+    cursor: pointer;
+}
+
+footer .copyright{
+    background-color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80px;
+}
+
+.copyright p{
+    padding-left: 4%;
+    color: #ddd;
+    padding-right: 30px;
+}
+
+.sns-icon{
+    display: flex;
+    justify-content: center;
+}
+
+.sns-icon li{
+    list-style-type: none;
+}
+
+.sns-icon a img{
+    padding: 10px;
+    width: 60px;
+}
